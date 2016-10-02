@@ -1,0 +1,24 @@
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+$rythm-unit: 'rem';
+* {
+    box-sizing: border-box;
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $blue;
+}
+
+ul {
+	list-style: none;
+}
+
+button:focus {
+	border: 0;
+	outline: none;
+}

@@ -1,0 +1,195 @@
+nav.mobile {
+    background-color: $darkorange;
+    color: $white;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    .nav-heading {
+        background-color: $blue;
+        font-size: 1.5em;
+        text-transform: capitalize;
+    }
+    ul {
+        text-transform: capitalize;
+        li {
+            transition: 0.3s;
+            a {
+                color: $white;
+            }
+            &:hover {
+                background-color: $white;
+                a {
+                    color: $darkorange;
+                }
+            }
+        }
+    }
+    .close-nav {
+        font-size: 2em;
+        border-top: solid 1px $white;
+        button {
+            background-color: $darkorange;
+            border: none;
+        }
+        &:hover {
+            background-color: $white;
+            color: $darkorange;
+            button {
+                background-color: $white;
+                border: none;
+            }
+        }
+    }
+}
+
+.search-mobile {
+    input {
+        border-color: $orange;
+        font-size: 1.5em;
+        color: $darkorange;
+        &:focus {
+            outline-color: lighten($orange, 50);
+        }
+    }
+}
+
+header {
+    transition: 0.5s;
+    #nav-mobile {
+        #logo {
+            background-color: $orange;
+            color: $white;
+            font-size: 1.2em;
+            #menu {
+                cursor: pointer;
+            }
+            h1 {
+                font-size: 1.2em;
+                a {
+                    color: $white;
+                }
+            }
+            button {
+                background-color: $orange;
+                border: none;
+            }
+        }
+    }
+}
+
+main {
+    #main-posts {
+        h1 {
+            text-transform: capitalize;
+            border-bottom: solid 2px $lightorange;
+            color: $blue;
+            font-weight: bold;
+            text-align: center;
+        }
+        .post-excerpt {
+            .post-image {
+                text-align: center;
+                cursor: pointer;
+                img {
+                    transition: 0.5s;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            h1 {
+                font-size: 1.5em;
+                line-height: 1.2em;
+                border-bottom: none;
+                text-align: left;
+            }
+            h2 {
+                text-align: left;
+                font-size: 0.7em;
+                color: $orange;
+            }
+            p {
+                color: $blue;
+                line-height: 1.2em;
+            }
+            a.button {
+                font-size: 0.9em;
+                outline-color: $darkorange;
+                background-color: $darkorange;
+                border-color: $darkorange;
+                color: $white;
+            }
+        }
+    }
+    #sidebar {
+        background-color: $lightorange;
+        .sidebar-widget {
+            background-color: $white;
+            margin-top: 0.5em;
+            h1 {
+                color: $blue;
+                text-transform: capitalize;
+                border-bottom: solid 1px $lightorange;
+                text-align: center;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            a {
+                font-size: 0.9em;
+                line-height: 1em;
+                i {
+                    color: $orange;
+                    line-height: 1em;
+                }
+            }
+        }
+        #book-subscription {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: $blue;
+            h1 {
+                background-color: $blue;
+                font-size: 1.2em;
+                text-align: center;
+                color: $lightorange;
+            }
+            p {
+                font-size: 0.8em;
+                font-weight: bold;
+                text-align: center;
+                line-height: 1em;
+            }
+            i {
+                font-size: 8em;
+                text-align: center;
+            }
+            input {
+                line-height: 1.5em;
+                padding: 0.5em;
+                border: solid 1px lighten($blue, 50);
+                &:focus {
+                    outline-color: lighten($orange, 50);
+                }
+            }
+            input[type="submit"] {
+                border: none;
+                background-color: $blue;
+                color: $lightorange;
+                font-weight: bold;
+                transition: 0.3s;
+                &:hover {
+                    background-color: $white;
+                    color: $blue;
+                }
+                &:focus {
+                    outline-color: $blue;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $darkorange;
+    color: $white;
+    font-size: 0.9em;
+    text-align: center;
+}
