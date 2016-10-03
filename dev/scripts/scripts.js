@@ -1,3 +1,5 @@
+/*global jQuery*/
+
 jQuery(document).ready(function($) {
 
     // mobile nav menu script
@@ -35,15 +37,15 @@ jQuery(document).ready(function($) {
         var scroll = $(window).scrollTop();
         var mobilestate = $("#nav-mobile").css('display');
 
-        if (scroll > 180) {
+        if (scroll > 80) {
             if (mobilestate != 'block') {
-                $("#nav-sticky").slideDown(100);
+                $("#nav-sticky").fadeIn(100);
                 $(".search-sticky input").focus();
             }
             $(".scrolltop").fadeIn();
         } else {
-            $(".scrolltop").fadeOut();
-            $("#nav-sticky").slideUp(100);
+            $(".scrolltop").fadeOut(100);
+            $("#nav-sticky").fadeOut();
             $(".search-desktop input[type='text'").focus();
         }
     });
