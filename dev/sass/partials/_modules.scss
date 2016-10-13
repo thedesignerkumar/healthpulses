@@ -1,195 +1,200 @@
+
+/********************************************
+            MOBILE NAVIGATION MENU
+********************************************/
 nav.mobile {
-    background-color: $darkorange;
+    background-color: darken($darkorange, 0);
     color: $white;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    .nav-heading {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    .title-bar {
+        @include container(100%);
+        text-align: center;
         background-color: $blue;
-        font-size: 1.5em;
-        text-transform: capitalize;
+        font-size: 2em;
+        h1 {
+            @include span(8);
+            text-transform: capitalize;
+            padding: 0.5em;
+        }
+        button {
+            @include span(last 4);
+            padding: 0.5em;
+        }
     }
     ul {
-        text-transform: capitalize;
         li {
-            transition: 0.3s;
-            a {
-                color: $white;
-            }
-            &:hover {
-                background-color: $white;
-                a {
-                    color: $darkorange;
-                }
-            }
-        }
-    }
-    .close-nav {
-        font-size: 2em;
-        border-top: solid 1px $white;
-        button {
-            background-color: $darkorange;
-            border: none;
-        }
-        &:hover {
-            background-color: $white;
-            color: $darkorange;
-            button {
-                background-color: $white;
-                border: none;
-            }
-        }
-    }
-}
-
-.search-mobile {
-    input {
-        border-color: $orange;
-        font-size: 1.5em;
-        color: $darkorange;
-        &:focus {
-            outline-color: lighten($orange, 50);
-        }
-    }
-}
-
-header {
-    transition: 0.5s;
-    #nav-mobile {
-        #logo {
-            background-color: $orange;
-            color: $white;
-            font-size: 1.2em;
-            #menu {
-                cursor: pointer;
-            }
-            h1 {
-                font-size: 1.2em;
-                a {
-                    color: $white;
-                }
-            }
-            button {
-                background-color: $orange;
-                border: none;
-            }
-        }
-    }
-}
-
-main {
-    #main-posts {
-        h1 {
             text-transform: capitalize;
-            border-bottom: solid 2px $lightorange;
-            color: $blue;
-            font-weight: bold;
-            text-align: center;
-        }
-        .post-excerpt {
-            .post-image {
-                text-align: center;
-                cursor: pointer;
-                img {
-                    transition: 0.5s;
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-            }
-            h1 {
-                font-size: 1.5em;
-                line-height: 1.2em;
-                border-bottom: none;
-                text-align: left;
-            }
-            h2 {
-                text-align: left;
-                font-size: 0.7em;
-                color: $orange;
-            }
-            p {
-                color: $blue;
-                line-height: 1.2em;
-            }
-            a.button {
-                font-size: 0.9em;
-                outline-color: $darkorange;
-                background-color: $darkorange;
-                border-color: $darkorange;
-                color: $white;
-            }
-        }
-    }
-    #sidebar {
-        background-color: $lightorange;
-        .sidebar-widget {
-            background-color: $white;
-            margin-top: 0.5em;
-            h1 {
-                color: $blue;
-                text-transform: capitalize;
-                border-bottom: solid 1px $lightorange;
-                text-align: center;
-                font-size: 1.2em;
-                font-weight: bold;
+            font-size: 1.2em;
+            margin: 0;
+            border-bottom: solid 1px $white;
+            &:before {
+                content: none;
+                margin-right: 0;
             }
             a {
-                font-size: 0.9em;
-                line-height: 1em;
-                i {
-                    color: $orange;
-                    line-height: 1em;
-                }
-            }
-        }
-        #book-subscription {
-            background-color: rgba(0, 0, 0, 0.3);
-            color: $blue;
-            h1 {
-                background-color: $blue;
-                font-size: 1.2em;
-                text-align: center;
-                color: $lightorange;
-            }
-            p {
-                font-size: 0.8em;
-                font-weight: bold;
-                text-align: center;
-                line-height: 1em;
-            }
-            i {
-                font-size: 8em;
-                text-align: center;
-            }
-            input {
-                line-height: 1.5em;
-                padding: 0.5em;
-                border: solid 1px lighten($blue, 50);
-                &:focus {
-                    outline-color: lighten($orange, 50);
-                }
-            }
-            input[type="submit"] {
-                border: none;
-                background-color: $blue;
-                color: $lightorange;
-                font-weight: bold;
-                transition: 0.3s;
+                display: block;
+                padding: 1em;
+                transition: 1s;
                 &:hover {
                     background-color: $white;
                     color: $blue;
                 }
-                &:focus {
-                    outline-color: $blue;
-                }
             }
         }
     }
 }
 
-footer {
-    background-color: $darkorange;
+/********************************************
+            SEARCH BAR
+********************************************/
+
+
+/********************************************
+            MOBILE HEADER
+********************************************/
+#mobile-header {
+    background-color: darken($darkorange, 0);
+    @include container(100%);
+    font-size: 1.8em;
     color: $white;
-    font-size: 0.9em;
+    padding: 0.5em 0;
+    .menu {
+        @include span(2);
+    }
+    h1 {
+        @include span(8);
+        text-align: center;
+    }
+    .search-button{
+        @include span(last 2);
+    }
+}
+
+/********************************************
+            POSTS
+********************************************/
+#posts {
+    article {
+        margin-bottom: 1.5em;
+        padding-bottom: 1.5em;
+        border-bottom: solid 1px lighten($lightorange, 0);
+        .post-image {
+            width: 100%;
+            overflow: hidden;
+            img {
+                transition: 1s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        h1 {
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1.25em;
+            &:first-letter {
+                text-transform: capitalize;
+            }
+        }
+        h2 {
+            font-size: 0.8em;
+            color: $darkorange;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+/********************************************
+            SIDEBAR
+********************************************/
+.sidebar {
+    background-color: lighten($lightorange, 0);
+    padding: 1em;
+    aside {
+        background-color: rgba($white, 1);
+        padding: 0.5em;
+        margin-bottom: 1em;
+        h1 {
+            font-size: 1.5em;
+            text-align: center;
+            border-bottom: solid 1px $blue;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+            text-transform: capitalize;
+        }
+    }
+}
+
+/********************************************
+            READERS BOOK WIDGET
+********************************************/
+.sidebar .widget_readers_book {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $blue;
+    padding: 0;
+     h1 {
+            padding: 1em;
+            background-color: $blue;
+            font-size: 1.2em;
+            text-align: center;
+            line-height: 1.2em;
+            color: $lightorange;
+            text-transform: none;
+        }
+        i {
+            display: block;
+            margin: 0.3em 0;
+            font-size: 8em;
+            text-align: center;
+        }
+        input {
+            display: block;
+            width: 70%;
+            margin: 0.5em auto;
+            line-height: 1.5em;
+            padding: 0.5em;
+            border: solid 1px lighten($blue, 50);
+            &:focus {
+                outline-color: lighten($orange, 50);
+            }
+        }
+        input[type="submit"] {
+            border: none;
+            background-color: $blue;
+            color: $lightorange;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+                background-color: $white;
+                color: $blue;
+            }
+            &:focus {
+                outline-color: $blue;
+            }
+        }
+        p {
+            padding: 0.8em;
+            margin-top: 1em;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1em;
+        }
+}
+
+/********************************************
+            COPYRIGHT
+********************************************/
+p.copyright {
+    margin: 0;
     text-align: center;
+    color: $white;
+    font-size: 0.8em;
 }

@@ -8,28 +8,35 @@
 </head>
 
 <body>
-    <!-- mobile nav -->
-    <nav class="mobile">
-        <div class="nav-heading">menu</div>
-        <ul>
-            <li><a href="#"><span class="fa fa-user"></span> about us</a></li>
-            <li><a href="#"><span class="fa fa-cutlery"></span> healthy foods</a></li>
-            <li><a href="#"><span class="fa fa-book"></span> research universe</a></li>
-        </ul>
-        <div class="close-nav">
-            <button><span class="fa fa-close"></span></button>
-        </div>
-    </nav>
-    <div class="search-mobile">
-        <input type="text" name="search" placeholder="Search here">
-    </div>
-    <!-- mobile nav -->
-    <!-- scroll to top button -->
-    <button class="scrolltop"><i class="fa fa-arrow-up"></i></button>
-    <!-- scroll to top button -->
     <!--header starts here-->
     <header>
-        <div id="nav-sticky">
+    <!-- mobile nav -->
+        <nav class="mobile">
+            <div class="title-bar">
+                <h1>menu</h1>
+                <button><span class="fa fa-close"></span></button>
+            </div>
+            <ul>
+                <li><a href="about.html"><span class="fa fa-user"></span> about us</a></li>
+                <li><a href="healthy_foods.html"><span class="fa fa-cutlery"></span> healthy foods</a></li>
+                <li><a href="research_universe.html"><span class="fa fa-book"></span> research universe</a></li>
+            </ul>
+        </nav>
+        <div id="search-mobile" class="search">
+            <form role="search">
+                <span><i class="fa fa-search"></i></span>
+                <button class="search-close"><i class="fa fa-close"></i></button>
+                <input type="search" name="s" placeholder="Search here" autofocus="autofocus"/>
+            </form>
+        </div>
+        <!-- mobile nav -->
+    
+        <!-- scroll to top button -->
+        <button class="scrolltop"><i class="fa fa-arrow-up"></i></button>
+        <!-- scroll to top button -->
+    
+        <!--sticky header-->
+        <div id="sticky-header">
             <section id="logo">
                 <a href="index.html"><h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1></a>
             </section>
@@ -38,22 +45,23 @@
             </div>
             <nav class="desktop">
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">healthy foods</a></li>
-                    <li><a href="#">research universe</a></li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="healthy_foods.html">healthy foods</a></li>
+                    <li><a href="research_universe.html">research universe</a></li>
                 </ul>
             </nav>
         </div>
-        <div id="nav-mobile">
-            <section id="logo">
-                <div id="menu"><i class="fa fa-bars"></i></div>
+        
+        <!--mobile header starts here-->
+        <section id="mobile-header">
+                <button class="menu"><i class="fa fa-bars"></i></button>
                 <h1><a href="index.html"><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</a></h1>
-                <button class="search">
-                    <span class="fa fa-search"></span>
-                </button>
-            </section>
-        </div>
-        <div id="nav-desktop">
+                <button class="search-button"><i class="fa fa-search"></i></button>
+        </section>
+        <!--mobile header ends here-->
+        
+        <!--desktop header starts here-->
+        <div id="desktop-header">
             <section id="logo">
                 <a href="index.html"><h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
                 <h2>Know healthcare better</h2></a>
@@ -73,44 +81,46 @@
                 </div>
                 <nav class="desktop">
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">healthy foods</a></li>
-                        <li><a href="#">research universe</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="healthy_foods.html">healthy foods</a></li>
+                        <li><a href="research_universe.html">research universe</a></li>
                     </ul>
                 </nav>
             </section>
         </div>
+        <!--desktop header ends here-->
+        
     </header>
     <!--header ends here-->
+    
     <!--main starts here-->
     <main>
+        
+        <h1>latest articles</h1>
         <!--posts starts here-->
-        <section id="main-posts">
-            <h1>latest articles</h1>
-            <article class="post-excerpt">
-                <div>
+        <section id="posts">
+            <article>
                     <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
                     <h2>by Health Pulses On July 24, 2016 0 Comment</h2>
                     <div class="post-image"><img src="assets/images/image1.jpg" alt="image1"></div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur nobis, quia facilis omnis voluptas, repudiandae error libero iure placeat, ipsa fugiat sed. A vero tenetur id ipsum nisi iure?</p>
                     <a class="button" href="single-posts.html">Read more</a>
-                </div>
             </article>
-            <article class="post-excerpt">
+            <article>
                 <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
                 <h2>by Health Pulses On July 24, 2016 0 Comment</h2>
                 <div class="post-image"><img src="assets/images/image1.jpg" alt="image1"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur nobis, quia facilis omnis voluptas, repudiandae error libero iure placeat, ipsa fugiat sed. A vero tenetur id ipsum nisi iure?</p>
                 <a class="button" href="single-posts.html">Read more</a>
             </article>
-            <article class="post-excerpt">
+            <article>
                 <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
                 <h2>by Health Pulses On July 24, 2016 0 Comment</h2>
                 <div class="post-image"><img src="assets/images/image1.jpg" alt="image1"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur nobis, quia facilis omnis voluptas, repudiandae error libero iure placeat, ipsa fugiat sed. A vero tenetur id ipsum nisi iure?</p>
                 <a class="button" href="single-posts.html">Read more</a>
             </article>
-            <article class="post-excerpt">
+            <article>
                 <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
                 <h2>by Health Pulses On July 24, 2016 0 Comment</h2>
                 <div class="post-image"><img src="assets/images/image1.jpg" alt="image1"></div>
@@ -120,52 +130,46 @@
         </section>
         <!--posts ends here-->
         <!--sidebar starts here-->
-        <section id="sidebar">
-            <div class="sidebar-widget">
+        <section class="sidebar">
+            <aside class="widget">
                 <h1>categories</h1>
                 <ul>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Category 1</a></li>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Category 1</a></li>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Category 1</a></li>
+                    <li><a href="#"></i>Category 1</a></li>
+                    <li><a href="#"></i>Category 1</a></li>
+                    <li><a href="#"></i>Category 1</a></li>
                 </ul>
-            </div>
-            <div id="book-subscription">
+            </aside>
+            <aside class="widget widget_readers_book">
                 <h1>Download my free guide to start blogging quickly</h1>
                 <i class="fa fa-book"></i>
                 <input type="text" name="name" placeholder="Full Name">
                 <input type="email" name="email" placeholder="Email Address">
                 <input type="submit" name="submit" value="DOWNLOAD BOOK NOW">
                 <p>Your information is safe with us, we will not disclose it anyway</p>
-            </div>
-            <div class="sidebar-widget">
+            </aside>
+            <aside class="widget">
                 <h1>most read</h1>
                 <ul>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
                 </ul>
-            </div>
-            <div class="sidebar-widget">
+            </aside>
+            <aside class="widget">
                 <h1>recent articles</h1>
                 <ul>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"><i class="fa fa-plus-circle"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
                 </ul>
-            </div>
+            </aside>
         </section>
         <!--sidebar ends here-->
     </main>
     <!--main ends here-->
     <!--footer starts here-->
     <footer>
-        <p>
-            Like us on:
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google"></i></a>
-        </p>
-        <p>HealthPulses &copy; 2016</p>
+        <p class="copyright">HealthPulses &copy; 2016</p>
     </footer>
     <!--footer ends here-->
     <!--scripts-->

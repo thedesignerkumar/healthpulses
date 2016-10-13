@@ -4,21 +4,110 @@ $base-line-height: 24px;
 $rythm-unit: 'rem';
 * {
     box-sizing: border-box;
+}
+
+body {
     font-family: $font;
-    margin: 0;
-    padding: 0;
+    color: $blue;
 }
 
 a {
 	text-decoration: none;
-	color: $blue;
-}
-
-ul {
-	list-style: none;
 }
 
 button:focus {
 	border: 0;
 	outline: none;
+}
+
+p,
+li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-left: 25px;
+}
+
+li:before {
+    content: '\f055';
+    font-family: FontAwesome;
+    font-size: 0.7em;
+    margin-right: 10px;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    span {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        z-index: 1;
+        font-size: 1.5em;
+        padding: 0.68em;
+        background-color: $white;
+        display: block;
+    }
+    .search-close {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        z-index: 1;
+        font-size: 1.5em;
+        padding: 0.68em;
+        background-color: $white;
+        display: block;
+        transition: 1s;
+        &:hover {
+            background-color: $darkorange;
+            color: $white;
+        }
+    }
+    input[type="search"] {
+        width: 100%;
+        border: solid 1px lighten($darkorange, 20);
+        font-size: 1.5em;
+        padding: 0.6em;
+        padding-right: 2.5em;
+        transition: 1s;
+        &:focus {
+            background-color: lighten($lightorange, 10);
+        }
+    }
+}
+
+.scrolltop {
+    display: none;
+    background-color: $blue;
+    padding: 0.5em 0.8em;
+    font-size: 1.5em;
+    color: $white;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    border: none;
+    z-index: 1;
+    transition: 1s;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: black;
+    }
+}
+
+a.button {
+    background-color: darken($darkorange, 0);
+    padding: 0.5em;
+    color: $white;
+    display: inline-block;
+    transition: 1s;
+    border: solid 1px darken($darkorange, 0);
+    &:hover {
+        background-color: $white;
+        border: solid 1px $blue;
+        color: $blue;
+    }
 }

@@ -1,36 +1,53 @@
 /*global jQuery*/
 
 jQuery(document).ready(function($) {
+    
+    var device_width = $(window).width();
 
     // mobile nav menu script
 
-    $("#menu").on('click', function(event) {
+    $(".menu").on('click', function(event) {
 
         // increase the width of the nav.mobile
-        $("nav.mobile").css({
-            'width': '300px'
-        });
+        $("nav.mobile").animate({
+            'width': '250px',
+            'direction': 'left'
+        }, 500);
 
     });
 
-    $(".close-nav button").on('click', function(event) {
+    $(".title-bar button").on('click', function(event) {
         event.preventDefault();
 
         // change the width of the nav.mobile to 0
-        $("nav.mobile").css({
-            'width': '0'
-        });
+        $("nav.mobile").animate({
+            'width': '0',
+            'direction': 'left'
+        }, 500);
     });
 
     // mobile search bar scripts
 
-    $("button.search").on('click', function(event) {
+    $("button.search-button").on('click', function(event) {
         event.preventDefault();
 
         // toggle the visibility of search bar
-        $(".search-mobile").slideToggle(300);
-        $(".search-mobile input").focus();
+        $("#search-mobile").animate({
+            'left': '0'
+        }, 500);
+        
+        $("#search-mobile input").focus();
 
+    });
+    
+    $("button.search-close").on('click', function(event){
+       event.preventDefault();
+       
+       // hide the search bar
+       $("#search-mobile").animate({
+           'left': device_width
+       }, 500);
+        
     });
 
     $(window).scroll(function(event) {
