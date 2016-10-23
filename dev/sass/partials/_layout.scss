@@ -4,6 +4,9 @@
 ********************************************/
 #desktop-header {
     display: none;
+    @include susy-breakpoint($bp-desktop) {
+        display: block;
+    }
 }
 
 #sticky-header {

@@ -10,7 +10,7 @@
 <body>
     <!--header starts here-->
     <header>
-    <!-- mobile nav -->
+        <!-- mobile nav -->
         <nav class="mobile">
             <div class="title-bar">
                 <h1>menu</h1>
@@ -26,19 +26,21 @@
             <form role="search">
                 <span><i class="fa fa-search"></i></span>
                 <button class="search-close"><i class="fa fa-close"></i></button>
-                <input type="search" name="s" placeholder="Search here" autofocus="autofocus"/>
+                <input type="search" name="s" placeholder="Search here" autofocus="autofocus" />
             </form>
         </div>
         <!-- mobile nav -->
-    
+
         <!-- scroll to top button -->
         <button class="scrolltop"><i class="fa fa-arrow-up"></i></button>
         <!-- scroll to top button -->
-    
+
         <!--sticky header-->
         <div id="sticky-header">
             <section id="logo">
-                <a href="index.html"><h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1></a>
+                <a href="index.html">
+                    <h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
+                </a>
             </section>
             <div class="search-sticky">
                 <input type="text" name="search" placeholder="Search here" autofocus="autofocus">
@@ -51,20 +53,22 @@
                 </ul>
             </nav>
         </div>
-        
+
         <!--mobile header starts here-->
         <section id="mobile-header">
-                <button class="menu"><i class="fa fa-bars"></i></button>
-                <h1><a href="index.html"><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</a></h1>
-                <button class="search-button"><i class="fa fa-search"></i></button>
+            <button class="menu"><i class="fa fa-bars"></i></button>
+            <h1><a href="index.html"><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</a></h1>
+            <button class="search-button"><i class="fa fa-search"></i></button>
         </section>
         <!--mobile header ends here-->
-        
+
         <!--desktop header starts here-->
         <div id="desktop-header">
             <section id="logo">
-                <a href="index.html"><h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
-                <h2>Know healthcare better</h2></a>
+                <a href="index.html">
+                    <h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
+                    <h2>Know healthcare better</h2>
+                </a>
             </section>
             <section id="nav-right">
                 <div class="social">
@@ -75,9 +79,12 @@
                         <a href="#"><i class="fa fa-google"></i></a>
                     </p>
                 </div>
-                <div class="search-desktop">
-                    <input type="submit" value="&#xf002;">
-                    <input type="text" name="search" placeholder="Search here" autofocus="autofocus">
+                <div id="search-desktop" class="search">
+                    <form role="search">
+                        <span><i class="fa fa-search"></i></span>
+                        <button class="search-close"><i class="fa fa-close"></i></button>
+                        <input type="search" name="s" placeholder="Search here" autofocus="autofocus" />
+                    </form>
                 </div>
                 <nav class="desktop">
                     <ul>
@@ -89,22 +96,22 @@
             </section>
         </div>
         <!--desktop header ends here-->
-        
+
     </header>
     <!--header ends here-->
-    
+
     <!--main starts here-->
     <main>
-        
+
         <h1>latest articles</h1>
         <!--posts starts here-->
         <section id="posts">
             <article>
-                    <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
-                    <h2>by Health Pulses On July 24, 2016 0 Comment</h2>
-                    <div class="post-image"><img src="assets/images/image1.jpg" alt="image1"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur nobis, quia facilis omnis voluptas, repudiandae error libero iure placeat, ipsa fugiat sed. A vero tenetur id ipsum nisi iure?</p>
-                    <a class="button" href="single-posts.html">Read more</a>
+                <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
+                <h2>by Health Pulses On July 24, 2016 0 Comment</h2>
+                <div class="post-image"><img src="assets/images/image1.jpg" alt="image1"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur nobis, quia facilis omnis voluptas, repudiandae error libero iure placeat, ipsa fugiat sed. A vero tenetur id ipsum nisi iure?</p>
+                <a class="button" href="single-posts.html">Read more</a>
             </article>
             <article>
                 <h1><a href="single-posts.html">high protein diet is a healthy weight loss diet</a></h1>
@@ -134,9 +141,15 @@
             <aside class="widget">
                 <h1>categories</h1>
                 <ul>
-                    <li><a href="#"></i>Category 1</a></li>
-                    <li><a href="#"></i>Category 1</a></li>
-                    <li><a href="#"></i>Category 1</a></li>
+                    <li>
+                        <a href="#"></i>Category 1</a>
+                    </li>
+                    <li>
+                        <a href="#"></i>Category 1</a>
+                    </li>
+                    <li>
+                        <a href="#"></i>Category 1</a>
+                    </li>
                 </ul>
             </aside>
             <aside class="widget widget_readers_book">
@@ -152,15 +165,23 @@
                 <ul>
                     <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
                     <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li>
+                        <a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
                 </ul>
             </aside>
             <aside class="widget">
                 <h1>recent articles</h1>
                 <ul>
-                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    <li>
+                        <a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li>
+                        <a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li>
+                        <a href="#"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
                 </ul>
             </aside>
         </section>

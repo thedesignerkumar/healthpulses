@@ -59,6 +59,9 @@ nav.mobile {
             MOBILE HEADER
 ********************************************/
 #mobile-header {
+    @include susy-breakpoint($bp-desktop) {
+        display: none;
+    }
     background-color: darken($darkorange, 0);
     @include container(100%);
     font-size: 1.8em;
@@ -77,6 +80,31 @@ nav.mobile {
 }
 
 /********************************************
+            DESKTOP HEADER
+********************************************/
+#desktop-header {
+    @include container();
+    border: solid 1px black;
+    #logo {
+        @include span(4);
+        border: solid 1px red;
+        text-align: center;
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: $darkorange;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+    #nav-right {
+        @include span(last 8);
+        border: solid 1px green;
+    }
+}
+
+/********************************************
             POSTS
 ********************************************/
 #posts {
@@ -85,8 +113,9 @@ nav.mobile {
         padding-bottom: 1.5em;
         border-bottom: solid 1px lighten($lightorange, 0);
         .post-image {
-            width: 100%;
+            width: 80%;
             overflow: hidden;
+            margin: 0 auto;
             img {
                 transition: 1s;
                 &:hover {
