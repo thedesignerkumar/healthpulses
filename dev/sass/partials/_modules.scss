@@ -119,8 +119,8 @@ nav.mobile {
     #nav-right {
         @include span(last 8);
         text-align: right;
-        #search-desktop {
-            width: 60%;
+        .search {
+            width: 50%;
             button {
                 display: none;
             }

@@ -57,13 +57,13 @@ jQuery(document).ready(function($) {
         if (scroll > 80) {
             if (mobilestate != 'block') {
                 $("#sticky-header").fadeIn(100);
-                $(".sticky-search input").focus();
+                $("#sticky-search input").focus();
             }
             $(".scrolltop").fadeIn();
         } else {
             $(".scrolltop").fadeOut(100);
             $("#sticky-header").fadeOut();
-            $(".search-desktop input[type='text'").focus();
+            $("#search-desktop input").focus();
         }
     });
 
