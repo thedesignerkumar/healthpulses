@@ -1,7 +1,7 @@
-
 /********************************************
             HEADERS
 ********************************************/
+
 #desktop-header {
     display: none;
     @include susy-breakpoint($bp-desktop) {
@@ -27,9 +27,11 @@ header {
     margin-bottom: 1.5em;
 }
 
+
 /********************************************
             MAIN
 ********************************************/
+
 main {
     width: 98%;
     margin: 0 auto;
@@ -47,7 +49,8 @@ main {
             width: 50%;
             margin: 1em auto;
         }
-        #posts {
+        #posts,
+        #main-posts {
             @include span(8);
             article {
                 @include container();
@@ -59,15 +62,17 @@ main {
                 }
             }
         }
-        .sidebar {
+        .sidebar-main {
             @include span(last 4);
         }
     }
 }
 
+
 /********************************************
             FOOTER
 ********************************************/
+
 footer {
     background-color: $darkorange;
     padding: 0.5em;

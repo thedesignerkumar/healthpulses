@@ -8,30 +8,39 @@
 </head>
 
 <body>
-    <!-- mobile nav -->
-    <nav class="mobile">
-        <h1>menu</h1>
-        <ul>
-            <li><a href="about.html"><span class="fa fa-user"></span> about us</a></li>
-            <li><a href="healthy_foods.html"><span class="fa fa-cutlery"></span> healthy foods</a></li>
-            <li><a href="research_universe.html"><span class="fa fa-book"></span> research universe</a></li>
-        </ul>
-        <div class="close-nav">
-            <button><span class="fa fa-close"></span></button>
-        </div>
-    </nav>
-    <div class="search-mobile">
-        <input type="text" name="search" placeholder="Search here">
-    </div>
-    <!-- mobile nav -->
-    <!-- scroll to top button -->
-    <button class="scrolltop"><i class="fa fa-arrow-up"></i></button>
-    <!-- scroll to top button -->
     <!--header starts here-->
     <header>
-        <div id="nav-sticky">
+        <!-- mobile nav -->
+        <nav class="mobile">
+            <div class="title-bar">
+                <h1>menu</h1>
+                <button><span class="fa fa-close"></span></button>
+            </div>
+            <ul>
+                <li><a href="about.html"><span class="fa fa-user"></span> about us</a></li>
+                <li><a href="healthy_foods.html"><span class="fa fa-cutlery"></span> healthy foods</a></li>
+                <li><a href="research_universe.html"><span class="fa fa-book"></span> research universe</a></li>
+            </ul>
+        </nav>
+        <div id="search-mobile" class="search">
+            <form role="search">
+                <span><i class="fa fa-search"></i></span>
+                <button class="search-close"><i class="fa fa-close"></i></button>
+                <input type="search" name="s" placeholder="Search here" autofocus="autofocus" />
+            </form>
+        </div>
+        <!-- mobile nav -->
+
+        <!-- scroll to top button -->
+        <button class="scrolltop"><i class="fa fa-arrow-up"></i></button>
+        <!-- scroll to top button -->
+
+        <!--sticky header-->
+        <div id="sticky-header">
             <section id="logo">
-                <a href="index.html"><h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1></a>
+                <a href="index.html">
+                    <h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
+                </a>
             </section>
             <div class="search-sticky">
                 <input type="text" name="search" placeholder="Search here" autofocus="autofocus">
@@ -44,19 +53,22 @@
                 </ul>
             </nav>
         </div>
-        <div id="nav-mobile">
+
+        <!--mobile header starts here-->
+        <section id="mobile-header">
+            <button class="menu"><i class="fa fa-bars"></i></button>
+            <h1><a href="index.html"><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</a></h1>
+            <button class="search-button"><i class="fa fa-search"></i></button>
+        </section>
+        <!--mobile header ends here-->
+
+        <!--desktop header starts here-->
+        <div id="desktop-header">
             <section id="logo">
-                <div id="menu"><i class="fa fa-bars"></i></div>
-                <h1><a href="index.html"><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</a></h1>
-                <button class="search">
-                    <span class="fa fa-search"></span>
-                </button>
-            </section>
-        </div>
-        <div id="nav-desktop">
-            <section id="logo">
-                <a href="index.html"><h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
-                <h2>Know healthcare better</h2></a>
+                <a href="index.html">
+                    <h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
+                    <h2>Know healthcare better</h2>
+                </a>
             </section>
             <section id="nav-right">
                 <div class="social">
@@ -67,9 +79,12 @@
                         <a href="#"><i class="fa fa-google"></i></a>
                     </p>
                 </div>
-                <div class="search-desktop">
-                    <input type="submit" value="&#xf002;">
-                    <input type="text" name="search" placeholder="Search here" autofocus="autofocus">
+                <div id="search-desktop" class="search">
+                    <form role="search">
+                        <span><i class="fa fa-search"></i></span>
+                        <button class="search-close"><i class="fa fa-close"></i></button>
+                        <input type="search" name="s" placeholder="Search here" autofocus="autofocus" />
+                    </form>
                 </div>
                 <nav class="desktop">
                     <ul>
@@ -80,15 +95,17 @@
                 </nav>
             </section>
         </div>
+        <!--desktop header ends here-->
+
     </header>
     <!--header ends here-->
     <!--main starts here-->
     <main>
         <h1>Healthy Foods</h1>
         <div class="content">
-            <div class="tabs">
-                <h1>Spinach, a longevity vegetable</h1>
+            <div class="tabs">                
                 <div class="img"><img src="assets/images/Spinach.jpg" alt="spinach"></img></div>
+                <h1>Spinach, a longevity vegetable</h1>
                 <div class="text">
                     <ul>
  	                    <li>Spinach is a source of high level of antioxidants; vitamins like vitamin A, vitamin C, vitamin E, vitamin K and folic acid (it is water soluble vitamin B).</li>

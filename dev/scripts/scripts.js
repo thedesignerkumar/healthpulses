@@ -52,17 +52,17 @@ jQuery(document).ready(function($) {
 
     $(window).scroll(function(event) {
         var scroll = $(window).scrollTop();
-        var mobilestate = $("#nav-mobile").css('display');
+        var mobilestate = $("#mobile-header").css('display');
 
         if (scroll > 80) {
             if (mobilestate != 'block') {
-                $("#nav-sticky").fadeIn(100);
-                $(".search-sticky input").focus();
+                $("#sticky-header").fadeIn(100);
+                $(".sticky-search input").focus();
             }
             $(".scrolltop").fadeIn();
         } else {
             $(".scrolltop").fadeOut(100);
-            $("#nav-sticky").fadeOut();
+            $("#sticky-header").fadeOut();
             $(".search-desktop input[type='text'").focus();
         }
     });

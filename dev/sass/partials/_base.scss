@@ -8,6 +8,7 @@ $rythm-unit: 'rem';
 
 body {
     font-family: $font;
+    font-weight: normal;
     color: $blue;
 }
 
@@ -23,18 +24,20 @@ button:focus {
 p,
 li {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1em;    
+    line-height: 1.5em;
 }
 
 li {
-    margin-left: 25px;
-}
-
-li:before {
-    content: '\f055';
-    font-family: FontAwesome;
-    font-size: 0.7em;
-    margin-right: 10px;
+    margin-left: 1.5em;
+    padding-left: 1.5em;
+    &:before {
+        content: '\f055';
+        font-family: FontAwesome;
+        font-size: 0.7em;
+        margin-left: -1.5em;
+        margin-right: 0.8em;
+    }
 }
 
 .search {

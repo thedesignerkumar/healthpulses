@@ -30,22 +30,24 @@
             </form>
         </div>
         <!-- mobile nav -->
-
         <!-- scroll to top button -->
         <button class="scrolltop"><i class="fa fa-arrow-up"></i></button>
         <!-- scroll to top button -->
-
         <!--sticky header-->
         <div id="sticky-header">
             <section id="logo">
                 <a href="index.html">
-                    <h1><i class="fa fa-ambulance" area-hidden="true"></i>ealthPulses</h1>
+                    <h1><i class="fa fa-ambulance" area-hidden="true"></i></h1>
                 </a>
             </section>
-            <div class="search-sticky">
-                <input type="text" name="search" placeholder="Search here" autofocus="autofocus">
+            <div id="sticky-search" class="search">
+                <form role="search">
+                    <span><i class="fa fa-search"></i></span>
+                    <button class="search-close"><i class="fa fa-close"></i></button>
+                    <input type="search" name="s" placeholder="Search here" autofocus="autofocus" />
+                </form>
             </div>
-            <nav class="desktop">
+            <nav>
                 <ul>
                     <li><a href="about.html">about us</a></li>
                     <li><a href="healthy_foods.html">healthy foods</a></li>
@@ -53,7 +55,6 @@
                 </ul>
             </nav>
         </div>
-
         <!--mobile header starts here-->
         <section id="mobile-header">
             <button class="menu"><i class="fa fa-bars"></i></button>
@@ -61,7 +62,6 @@
             <button class="search-button"><i class="fa fa-search"></i></button>
         </section>
         <!--mobile header ends here-->
-
         <!--desktop header starts here-->
         <div id="desktop-header">
             <section id="logo">
@@ -86,7 +86,7 @@
                         <input type="search" name="s" placeholder="Search here" autofocus="autofocus" />
                     </form>
                 </div>
-                <nav class="desktop">
+                <nav>
                     <ul>
                         <li><a href="about.html">about us</a></li>
                         <li><a href="healthy_foods.html">healthy foods</a></li>
@@ -96,13 +96,10 @@
             </section>
         </div>
         <!--desktop header ends here-->
-
     </header>
     <!--header ends here-->
-
     <!--main starts here-->
     <main>
-
         <h1>latest articles</h1>
         <!--posts starts here-->
         <section id="posts">
@@ -137,7 +134,7 @@
         </section>
         <!--posts ends here-->
         <!--sidebar starts here-->
-        <section class="sidebar">
+        <section class="sidebar-main">
             <aside class="widget">
                 <h1>categories</h1>
                 <ul>

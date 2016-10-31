@@ -1,7 +1,7 @@
-
 /********************************************
             MOBILE NAVIGATION MENU
 ********************************************/
+
 nav.mobile {
     background-color: darken($darkorange, 0);
     color: $white;
@@ -50,14 +50,30 @@ nav.mobile {
     }
 }
 
+
 /********************************************
-            SEARCH BAR
+            SINGLE PAGE CONTENT
 ********************************************/
+
+.content {
+    @include susy-breakpoint($bp-desktop) {
+        @include container(80%);
+    }
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 1em 0;
+    }
+    img {
+        margin: 1em auto;
+    }
+}
 
 
 /********************************************
             MOBILE HEADER
 ********************************************/
+
 #mobile-header {
     @include susy-breakpoint($bp-desktop) {
         display: none;
@@ -74,20 +90,22 @@ nav.mobile {
         @include span(8);
         text-align: center;
     }
-    .search-button{
+    .search-button {
         @include span(last 2);
     }
 }
 
+
 /********************************************
             DESKTOP HEADER
 ********************************************/
+
 #desktop-header {
     @include container();
-    border: solid 1px black;
+    border-bottom: solid 2px $darkorange;
     #logo {
         @include span(4);
-        border: solid 1px red;
+        margin-top: 2em;
         text-align: center;
         h1 {
             font-size: 3em;
@@ -100,14 +118,127 @@ nav.mobile {
     }
     #nav-right {
         @include span(last 8);
-        border: solid 1px green;
+        text-align: right;
+        #search-desktop {
+            width: 60%;
+            button {
+                display: none;
+            }
+            input {
+                padding-left: 2.5em;
+            }
+            span {
+                background-color: $darkorange;
+                color: $white;
+            }
+        }
+        .social {
+            a {
+                margin: 0 0.5em;
+                transition: 1s;
+                padding: 0.2em 0.5em;
+                font-size: 1.2em;
+                color: $darkorange;
+                &:hover {
+                    background-color: $darkorange;
+                    color: $white;
+                }
+            }
+        }
+        nav {
+            ul {
+                li {
+                    display: inline-block;
+                    &:before {
+                        content: none;
+                    }
+                    a {
+                        transition: 1s;
+                        text-transform: uppercase;
+                        padding: 1em;
+                        font-weight: bold;
+                        &:hover {
+                            background-color: $darkorange;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
+
 /********************************************
-            POSTS
+            STICKY HEADER
 ********************************************/
-#posts {
+
+#sticky-header {
+    // display: none;
+    transition: display 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    background-color: $darkorange;
+    @include container;
+    box-shadow: 2px 2px 2px 2px rgba($blue, 0.5);
+    #logo,
+    #sticky-search,
+    nav {
+        margin: 10px 0;
+    }
+    #logo {
+        @include span(3);
+        color: $white;
+        font-size: 4em;
+        text-align: center;
+    }
+    #sticky-search {
+        @include span(4);
+        button {
+            display: none;
+        }
+        input {
+            padding-left: 2.5em;
+        }
+        span {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    nav {
+        @include span( last 5);
+        ul {
+            li {
+                display: inline-block;
+                &:before {
+                    content: none;
+                }
+                a {
+                    transition: 1s;
+                    text-transform: uppercase;
+                    padding: 1em;
+                    font-weight: bold;
+                    color: $white;
+                    &:hover {
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/********************************************
+            POSTS, MAIN POSTS
+********************************************/
+
+#posts,
+#main-posts {
     article {
         margin-bottom: 1.5em;
         padding-bottom: 1.5em;
@@ -123,26 +254,28 @@ nav.mobile {
                 }
             }
         }
-        h1 {
-            font-size: 1.5em;
-            font-weight: bold;
-            line-height: 1.25em;
-            &:first-letter {
-                text-transform: capitalize;
-            }
+    }
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        line-height: 1.5em;
+        &:first-letter {
+            text-transform: capitalize;
         }
-        h2 {
-            font-size: 0.8em;
-            color: $darkorange;
-            margin-bottom: 1em;
-        }
+    }
+    h2 {
+        font-size: 0.8em;
+        color: $darkorange;
+        margin-bottom: 1em;
     }
 }
 
+
 /********************************************
-            SIDEBAR
+            MAIN SIDEBAR
 ********************************************/
-.sidebar {
+
+.sidebar-main {
     background-color: lighten($lightorange, 0);
     padding: 1em;
     aside {
@@ -157,70 +290,80 @@ nav.mobile {
             margin-bottom: 0.5em;
             text-transform: capitalize;
         }
+        li {
+            &:hover {
+                background-color: $darkorange;
+                color: $white;
+            }
+        }
     }
 }
+
 
 /********************************************
             READERS BOOK WIDGET
 ********************************************/
-.sidebar .widget_readers_book {
+
+.sidebar-main .widget_readers_book {
     background-color: rgba(0, 0, 0, 0.3);
     color: $blue;
     padding: 0;
-     h1 {
-            padding: 1em;
-            background-color: $blue;
-            font-size: 1.2em;
-            text-align: center;
-            line-height: 1.2em;
-            color: $lightorange;
-            text-transform: none;
+    h1 {
+        padding: 1em;
+        background-color: $blue;
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 1.2em;
+        color: $lightorange;
+        text-transform: none;
+    }
+    i {
+        display: block;
+        margin: 0.3em 0;
+        font-size: 8em;
+        text-align: center;
+    }
+    input {
+        display: block;
+        width: 70%;
+        margin: 0.5em auto;
+        line-height: 1.5em;
+        padding: 0.5em;
+        border: solid 1px lighten($blue, 50);
+        &:focus {
+            outline-color: lighten($orange, 50);
         }
-        i {
-            display: block;
-            margin: 0.3em 0;
-            font-size: 8em;
-            text-align: center;
+    }
+    input[type="submit"] {
+        border: none;
+        background-color: $blue;
+        color: $lightorange;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $white;
+            color: $blue;
         }
-        input {
-            display: block;
-            width: 70%;
-            margin: 0.5em auto;
-            line-height: 1.5em;
-            padding: 0.5em;
-            border: solid 1px lighten($blue, 50);
-            &:focus {
-                outline-color: lighten($orange, 50);
-            }
+        &:focus {
+            outline-color: $blue;
         }
-        input[type="submit"] {
-            border: none;
-            background-color: $blue;
-            color: $lightorange;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            &:hover {
-                background-color: $white;
-                color: $blue;
-            }
-            &:focus {
-                outline-color: $blue;
-            }
-        }
-        p {
-            padding: 0.8em;
-            margin-top: 1em;
-            font-size: 0.8em;
-            font-weight: bold;
-            text-align: center;
-            line-height: 1em;
-        }
+    }
+    p {
+        padding: 0.8em;
+        margin-top: 1em;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1em;
+    }
 }
+
 
 /********************************************
             COPYRIGHT
 ********************************************/
+
 p.copyright {
     margin: 0;
     text-align: center;
